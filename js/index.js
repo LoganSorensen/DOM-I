@@ -49,6 +49,10 @@ midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 const ctaHeader = document.querySelector("h1");
 ctaHeader.textContent = siteContent["cta"]["h1"];
+ctaHeader.style.width = "175px";
+ctaHeader.style.marginRight = "80px";
+ctaHeader.style.textAlign = "center";
+// ctaHeader.style.wordBreak = "break-all"
 
 const button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
@@ -81,6 +85,9 @@ contactText[0].textContent = siteContent["contact"]["address"];
 contactText[1].textContent = siteContent["contact"]["phone"];
 contactText[2].textContent = siteContent["contact"]["email"];
 
+const contactSection = document.querySelector(".contact")
+contactSection.style.width = "150px";
+
 const footerText = document.querySelector("footer p");
 footerText.textContent = siteContent["footer"]["copyright"];
 
@@ -91,6 +98,10 @@ links.forEach(element => {
 const newNav = document.createElement("nav1");
 newNav.textContent = "Nav 1";
 
+const newNav2 = document.createElement("nav2");
+newNav2.textContent = "Nav 2";
+
 const secondaryContent = document.querySelector("nav");
 
-nav.prepend(newNav);
+secondaryContent.prepend(newNav);
+secondaryContent.appendChild(newNav2);
